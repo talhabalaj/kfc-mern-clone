@@ -1,0 +1,46 @@
+@import '../../style/variables.scss';
+
+.footer {
+  & .logo {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    padding: 4rem 0;
+    border-top: 1px solid #f3f3f3;
+  }
+
+  & .nav {
+    align-items: flex-start;
+
+    ul {
+      list-style: none;
+
+      li {
+        font-size: 1.2rem;
+        color: $text-color-light;
+
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      } 
+
+      a {
+        color: $text-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underlineu;
+        }
+      }
+
+      .link-heading {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    margin: 2rem 0;
+  }
+}

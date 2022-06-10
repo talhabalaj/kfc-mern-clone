@@ -1,0 +1,15 @@
+@import '../../style/variables.scss';
+
+.ribbon-bar {
+  display: flex;
+  height: 1.25rem;
+  justify-content: center;
+
+  .ribbon {
+    width: 2.5rem;
+
+    &--red {
+      background-color: $kfc-color;
+    }
+  }
+}

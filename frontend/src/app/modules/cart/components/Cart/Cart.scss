@@ -1,0 +1,58 @@
+@import '../../../../style/variables.scss';
+
+.cart-button {
+  background-color: $kfc-color;
+  color: white;
+  padding: .7rem 1.4rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  cursor: pointer;
+  font-family: 'Bebas Neue';
+  font-size: 1.8rem;
+  border: none;
+}
+
+.cart {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    align-items: center;
+    font-family: 'Bebas Neue';
+    background-color: #2a2a2a;
+    color: white;
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: normal;
+    }
+
+    &>* {
+      width: 33.3%;
+      margin: 0 auto;
+    }
+
+  }
+
+  .cart-button {
+    font-size: 2.4rem;
+    width: fit-content;
+  }
+
+  &__body {
+    padding: 1rem;
+  }
+
+  &__total-price {
+    font-size: 2.4rem;
+    color: $kfc-color;
+    text-align: right;
+  }
+
+  &__empty-state-msg {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

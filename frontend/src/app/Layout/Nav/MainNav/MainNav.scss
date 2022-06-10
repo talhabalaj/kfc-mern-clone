@@ -1,0 +1,39 @@
+@import '../../../style/variables.scss';
+
+.main-nav {
+  background-color: #f3f3f3;
+  padding: 1.5rem;
+  margin-top: .5rem;
+  font-size: 1.8rem;
+  font-family: "Bebas Neue";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      padding: .5rem 0;
+      letter-spacing: 1px;
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    a.active {
+      color: $kfc-color;
+    }
+  }
+}
