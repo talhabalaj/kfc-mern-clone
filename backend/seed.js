@@ -7,7 +7,11 @@ import { load } from 'cheerio'
 
 config()
 
+console.log('Connecting to database...')
+
 await setupDb()
+
+console.log('Connected.')
 
 const categories = await Category.find({})
 
