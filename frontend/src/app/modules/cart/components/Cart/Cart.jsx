@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Button, Drawer } from '../../../../components'
-import { useListProductsQuery } from '../../../product/api'
+import { Button, Drawer } from '~/app/components'
+import { useListProductsQuery } from '~/app/modules/product/api'
 import { clearItems, closeCart, openCart } from '../../store/cartSlice'
 import { CartItem } from '../CartItem'
 
@@ -46,13 +46,17 @@ export const Cart = () => {
       >
         {cartItemsCount}
       </button>
-      {totalPrice > 0 && <span className="cart-total">PKR {totalPrice}</span>}
+      {totalPrice > 0 && (
+        <span className="cart-total">PKR {totalPrice.toLocaleString()}</span>
+      )}
       <Drawer isOpen={isCartOpen} onClose={() => dispatch(closeCart())}>
         <div className="cart">
           <div className="cart__header">
             <h2>Your Bucket</h2>
             <div className="cart-button">{cartItemsCount}</div>
-            <span className="cart__total-price">PKR {totalPrice}</span>
+            <span className="cart__total-price">
+              PKR {totalPrice.toLocaleString()}
+            </span>
           </div>
           <div className="cart__body">
             {cartItemsCount < 1 ? (

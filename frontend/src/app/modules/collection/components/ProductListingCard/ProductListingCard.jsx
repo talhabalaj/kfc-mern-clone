@@ -21,7 +21,7 @@ export const ProductListingCard = ({
         <p>{description}</p>
       </div>
       <div className="buy-button">
-        <div className="buy-button__price">PKR {price}</div>
+        <div className="buy-button__price">PKR {price.toLocaleString()}</div>
         <button className="buy-button__button">Add to Bucket</button>
       </div>
     </Link>

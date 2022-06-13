@@ -35,7 +35,9 @@ export const CartItem = ({ item }) => {
       <div className="cart-item__first-row">
         <h4 className="cart-item__name">{product?.name}</h4>
         <div className="cart-item__action">
-          <h4 className="cart-item__price">PKR {product?.price * quantity}</h4>
+          <h4 className="cart-item__price">
+            PKR {(product?.price * quantity).toLocaleString()}
+          </h4>
           <FiXCircle
             className="cart-item__remove-button"
             onClick={() => {

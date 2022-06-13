@@ -1,13 +1,11 @@
 import { useParams } from 'react-router-dom'
-import { useGetCollectionQuery } from '../../api'
+import { useGetCollectionQuery } from '~/app/modules/api'
 import { ProductListingCard } from '../components'
 import './Collection.scss'
 
-export const Collection = ({
-  slug: slugFromProps = null,
-}) => {
+export const Collection = ({ slug: slugFromProps = null }) => {
   const { slug: slugFromUrl } = useParams()
-  const slug = slugFromProps ?? slugFromUrl 
+  const slug = slugFromProps ?? slugFromUrl
   const { data } = useGetCollectionQuery(slug)
 
   const result = data?.data || []

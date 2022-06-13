@@ -40,7 +40,9 @@ export const ProductPage = () => {
       <div className="product-page__content">
         <h2 className="product-page__heading">{name}</h2>
         <p>{description}</p>
-        <h2 className="product-page__price">PKR {price * quantity}</h2>
+        <h2 className="product-page__price">
+          PKR {(price * quantity).toLocaleString()}
+        </h2>
         <div className="product-page__buy">
           <CounterButton
             value={quantity}

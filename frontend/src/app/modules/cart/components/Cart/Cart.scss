@@ -63,6 +63,7 @@
   &__total-price {
     font-size: 2.4rem;
     color: $kfc-color;
+    white-space: nowrap;
     text-align: right;
   }
 
