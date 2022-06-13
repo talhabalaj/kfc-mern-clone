@@ -57,7 +57,7 @@ for (const category of categories) {
           name: each.productName,
           description: descHtml.text(),
           slug: each.productUrl,
-          productPrice: each.productPrice,
+          price: each.productPrice,
           image,
           category: category._id,
         }

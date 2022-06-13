@@ -17,11 +17,34 @@ body {
   transition: all $drawer-transition-duration ease-in-out;
 }
 
+p {
+  color: $text-color-light;
+}
+
+#root {
+  transition: all $drawer-transition-duration ease-in-out;
+}
+
 .invisible-link {
   text-decoration: none;
   color: unset;
 }
 
 .drawer-open {
-  padding-right: 400px;
+  #root {
+    transform: translateX(-300px);
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.full-page-loading {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Bebas Neue';
+  font-size: 4rem;
+  align-items: center;
 }

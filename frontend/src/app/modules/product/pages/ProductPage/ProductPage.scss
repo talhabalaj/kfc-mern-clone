@@ -1,0 +1,41 @@
+.product-page {
+  display: flex;
+  padding: 2rem;
+  margin: 0 4rem;
+  width: fit-content;
+  gap: 2rem;
+
+  &__image {
+    flex: 7;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    flex: 8;
+  }
+
+  &__heading {
+    font-family: 'Bebas Neue';
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    font-weight: normal;
+  }
+
+  &__price {
+    @extend .product-page__heading;
+    font-size: 3rem;
+  }
+  
+  &__buy {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    line-height: 150%;
+  }
+}

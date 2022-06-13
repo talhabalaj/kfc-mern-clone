@@ -1,0 +1,41 @@
+@import '../../style/variables.scss';
+
+.btn {
+  background-color: $kfc-color;
+  border: none;
+  padding: 1rem 2rem;
+  color: white;
+  font-family: 'Bebas Neue';
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 1.8rem;
+  width: 100%;
+
+  &:hover {
+    background-color: darken($color: $kfc-color, $amount: 10);
+  }
+
+
+  &:active {
+    background-color: darken($color: $kfc-color, $amount: 20);
+  }
+
+  &--secondary {
+    background-color: white;
+    border: 2px solid $kfc-color;
+    color: $kfc-color;
+
+    &:hover {
+      background-color: darken($color: white, $amount: 5);
+    }
+
+
+    &:active {
+      background-color: darken($color: white, $amount: 10);
+    }
+  }
+
+  &--small {
+    padding: .5rem 1rem;
+  }
+}

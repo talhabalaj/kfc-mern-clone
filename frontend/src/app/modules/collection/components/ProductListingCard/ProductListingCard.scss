@@ -1,12 +1,14 @@
 .product-listing-card {
   border: 1px solid transparent;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
 
   &:hover {
     border-color: #e3e3e3;
   }
 
-  &__image {  
+  &__image {
     position: relative;
 
     &:hover {
@@ -24,8 +26,8 @@
   }
 
   &__heading {
-    margin-top: 1rem;
-    padding-bottom: .70rem;
+    margin-top: 1.5rem;
+    padding-bottom: 1rem;
     font-size: 1.8rem;
     font-family: 'Bebas Neue';
     font-weight: normal;
@@ -33,5 +35,11 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  &__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
   }
 }

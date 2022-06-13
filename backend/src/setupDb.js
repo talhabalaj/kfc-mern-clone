@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+import { User, Category, Product } from './models/index.js'
 
 export default function setupDb() {
   const databaseUrl = process.env.DATABASE_URL

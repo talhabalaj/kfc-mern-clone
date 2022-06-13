@@ -18,7 +18,6 @@ const Drawer = ({ isOpen = false, children, onClose }) => {
     document.querySelector('#drawer-node') || createDrawerDomNode()
   )
 
-
   useEffect(() => {
     bodyRef.current.appendChild(domNodeRef.current)
 
@@ -41,6 +40,19 @@ const Drawer = ({ isOpen = false, children, onClose }) => {
     }
 
     updatePageScroll()
+  }, [isOpen])
+
+  useEffect(() => {
+    const handler = (e) => {
+      console.log(e)
+      isOpen && e.key === 'Escape' && onClose?.()
+    }
+
+    document.addEventListener('keyup', handler)
+
+    return () => {
+      document.removeEventListener('keyup', handler)
+    }
   }, [isOpen])
 
   return createPortal(
@@ -66,7 +78,10 @@ const Drawer = ({ isOpen = false, children, onClose }) => {
 
 Drawer.propTypes = {
   isOpen: PropTypes.bool,
-  children: PropTypes.arrayOf(PropTypes.element),
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
   onClose: PropTypes.func,
 }
 

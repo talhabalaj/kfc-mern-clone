@@ -1,0 +1,44 @@
+@import '../../../../style/variables.scss';
+
+.cart-item {
+  padding: 1rem 0;
+  &__first-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+
+    h4 {
+      font-size: 2rem;
+      font-weight: normal;
+      font-family: 'Bebas Neue';
+    }
+  }
+
+  &__price {
+    color: $kfc-color;
+    white-space: nowrap;
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+
+    &>*:not(:last-child) {
+      margin-right: .5rem;
+    }
+  }
+
+  &__remove-button {
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  &__quantity-actions {
+    display: flex;
+    margin-top: 1rem;
+
+    & > *:not(:last-child) {
+      border-right: 0px;
+    }
+  }
+}
