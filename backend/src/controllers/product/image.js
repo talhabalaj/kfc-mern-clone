@@ -1,7 +1,7 @@
-import { Product } from '../../models/Product.js'
-import { catchAsync } from '../../utils/catchAsync.js'
-import { ApiError } from '../../utils/error.js'
+import { Product } from 'models/Product.js'
+import { catchAsync } from 'utils/catchAsync.js'
 import { fileTypeFromBuffer } from 'file-type'
+import { ApiError } from 'utils/error.js'
 
 export const image = catchAsync(async (req, res, next) => {
   const { slug } = req.params
