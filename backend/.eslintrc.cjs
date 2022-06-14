@@ -11,6 +11,8 @@ module.exports = {
   },
   rules: {
     'no-unused-vars': 'warn',
+    "import/extensions": ["error", "always"]
+
   },
   settings: {
     'import/resolver': {
