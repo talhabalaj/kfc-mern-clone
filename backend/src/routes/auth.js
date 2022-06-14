@@ -1,6 +1,6 @@
 import { Router } from 'express'
 
-import auth from '../controllers/auth/index.js'
+import auth from 'controllers/auth'
 
 const authRouter = Router()
 
